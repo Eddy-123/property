@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <!-- Detail -->
+    <div class="detail">
+        <h1 class="text-center my-5">{{ property.title }}</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 my-2 text-center">
+                    <h2 class="mb-3">Description</h2>
+                    <p>
+                        {{ property.description | nl2br}}
+                    </p>
+                    <p>
+                        {{ property.rooms }} pieces - {{ property.surface }} m²
+                    </p>
+                    <h3><a href="#" class="btn btn-outline-dark">Contacter l'agence</a></h3>
+                </div>
+                <div class="col-md-4 my-2">
+                    <img src="/img/2.jpg" class="w-100">
+                </div>
+                <div class="col-md-4 my-2 d-flex align-self-center justify-content-end">
+                    <h3>Price : <strong>{{ property.formattedPrice }} £</strong></h3>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-8">
+                    <h1>Features</h1>
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Surface</td>
+                            <td>{{ property.surface }}</td>
+                        </tr>
+                        <tr>
+                            <td>Pieces</td>
+                            <td>{{ property.rooms }}</td>
+                        </tr>
+                        <tr>
+                            <td>Bedrooms</td>
+                            <td>{{ property.bedrooms }}</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td>{{ property.floor }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heat</td>
+                            <td>{{ property.heatType }}</td>
+                        </tr>
+                        <tr>
+                            <td>Surface</td>
+                            <td>{{ property.surface }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h2>Specificities</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail end -->
+
+    <!-- Suggestion -->
+    <div class="container-fluid elements mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <p>Suggestions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+
+            <div class="col-md-4 col-sm-6 col-xs-12 my-4">
+                <img src="/img/1.jpg" class="w-100">
+                <h4 class="my-4">Home</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="d-flex justify-content-between">
+                    <a href="detail.html" class="btn btn-outline-dark btn-md">Détail</a>
+                    <a href="detail.html" class="btn btn-outline-dark btn-md">Price</a>
+                </p>
+            </div>
+
+
+
+            <div class="col-md-4 col-sm-6 col-xs-12 my-4">
+                <img src="/img/2.jpg" class="w-100">
+                <h4 class="my-4">Home</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="d-flex justify-content-between">
+                    <a href="index.html" class="btn btn-outline-dark btn-md">Détail</a>
+                    <a href="index.html" class="btn btn-outline-dark btn-md">Price</a>
+                </p>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 col-xs-12 my-4">
+                <img src="/img/3.jpg" class="w-100">
+                <h4 class="my-4">Home</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="d-flex justify-content-between">
+                    <a href="index.html" class="btn btn-outline-dark btn-md">Détail</a>
+                    <a href="index.html" class="btn btn-outline-dark btn-md">Price</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Suggestion end -->
+
+{% endblock %}
