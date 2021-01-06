@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Property{% endblock %}
+
+{% block body %}
+
+    <h1 class="mt-4 text-center">Manage properties</h1>
+      
+    <!-- Flash messages -->
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <!-- Flash messages end -->
+    <div class="container">
+        <div class="row my-5">
+            <h3 class="mx-auto"><a href="{{ path('admin_property_create') }}" class="btn btn-secondary">Create a new property</a></h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th class="text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for property in properties %}
+                        <tr>
+                            <td>{{ property.title }}</td>
+                            <td class="text-right">
+                                <a href="{{ path('admin_property_edit', {id: property.id}) }}" class="btn btn-secondary">Edit</a>
+                                <form action="{{ path('admin_property_delete', {id: property.id}) }}" 
+                                      method="post" class="d-inline-block"
+                                      onsubmit="return confirm('Do you really want to delete this ?')">
+                                    <input type="hidden" name="_method" value="DELETE" >
+                                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ property.id) }}" >
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

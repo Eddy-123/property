@@ -12,7 +12,6 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 my-4">
                     <img src="img/{{ (property.id % 2) + 1 }}.jpg" class="w-100">
                     <h4 class="my-4"><a href="{{ path('property_show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a></h4>
-                    <p>{{ property.description }}</p>
                     <p class="d-flex justify-content-between">
                         <a href="{{ path('property_show', {id: property.id, slug: property.slug}) }}" class="btn btn-outline-dark btn-md">Detail</a>
                         <a href="{{ path('property_show', {id: property.id, slug: property.slug}) }}" class="btn btn-outline btn-md">{{ property.city }}</a>
