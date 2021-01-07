@@ -3,10 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/eddy/workspace/web/back/property/templates/admin/admin_property/home.html.twig</file>
             <file>file:/home/eddy/workspace/web/back/property/templates/main/home.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/config/services.yaml</file>
+            <file>file:/home/eddy/workspace/web/back/property/translations/.gitignore</file>
+            <file>file:/home/eddy/workspace/web/back/property/translations/forms.fr.yaml</file>
+            <file>file:/home/eddy/workspace/web/back/property/templates/admin/admin_property/_form.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/templates/base.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/src/Controller/PropertyController.php</file>
             <file>file:/home/eddy/workspace/web/back/property/templates/admin/admin_property/edit.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/templates/admin/admin_property/create.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/templates/admin/admin_property/home.html.twig</file>
+            <file>file:/home/eddy/workspace/web/back/property/config/packages/translation.yaml</file>
             <file>file:/home/eddy/workspace/web/back/property/src/Controller/Admin/AdminPropertyController.php</file>
+            <file>file:/home/eddy/workspace/web/back/property/src/Form/PropertyType.php</file>
         </group>
     </open-files>
 </project-private>
