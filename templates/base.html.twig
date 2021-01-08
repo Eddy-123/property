@@ -29,6 +29,15 @@
 					<li class="nav-item">
                                             <a class="nav-link {% if current_item is defined and current_item == 'property_home' %} active {% endif %}" href="{{ path('property_home') }}">All</a>
 					</li>
+                                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}                                            
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ path('app_logout') }}">Disconnect</a>
+                                            </li>
+                                        {% else %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ path('app_login') }}">Connect</a>
+                                            </li>
+                                        {% endif %}
 				</ul>
 			</div>
 		</div>
